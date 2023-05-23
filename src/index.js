@@ -16,6 +16,9 @@ app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
 
+app.get("/version", (req, res) => {
+  res.send("Welcome Candidate v1.0");
+});
 // mongodb connection
 mongoose
   .connect(process.env.MONGODB_URI)

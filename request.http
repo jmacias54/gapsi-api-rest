@@ -1,28 +1,28 @@
 ###
-POST http://localhost:9000/api/provider HTTP/1.1
+POST https://gapsi-api-rest-production.up.railway.app/api/provider HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "AUDI",
+  "name": "MAZDA",
   "product": "vehicles",
   "phone": 5554738118,
   "email": "nikolatesla@email.com"
 }
 
 ###
-GET http://localhost:9000/api/providers HTTP/1.1
+GET https://gapsi-api-rest-production.up.railway.app/api/providers HTTP/1.1
 
 ###
-GET http://localhost:9000/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
+GET https://gapsi-api-rest-production.up.railway.app/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
 
 ###
-DELETE http://localhost:9000/api/provider/646d17da92a8e4c6a96f5adf HTTP/1.1
+DELETE https://gapsi-api-rest-production.up.railway.app/api/provider/646d17da92a8e4c6a96f5adf HTTP/1.1
 
 ###
-PUT http://localhost:9000/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
+PUT https://gapsi-api-rest-production.up.railway.app/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "John Conway",
-  "email": "johnconway@email.com"
+  "name": "Arnold Johannsen",
+  "email": "johanssen.ar@email.com"
 }
