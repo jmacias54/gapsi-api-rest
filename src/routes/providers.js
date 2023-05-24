@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require('cors')
 const providerSchema = require("../models/provider");
 const providerService = require("../service/providers");
 const router = express.Router();
@@ -7,8 +8,7 @@ const router = express.Router();
 router.post("/providers",providerService.createProvider);
 
 // get all 
-router.get("/providers", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
+router.get("/providers", cors(),(req, res) => {
     providerSchema
     .find()
     .then((data) => res.json(data))
@@ -16,8 +16,7 @@ router.get("/providers", (req, res) => {
 });
 
 // get detail
-router.get("/providers/:id", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
+router.get("/providers/:id", cors(),(req, res) => {
   const { id } = req.params;
   providerSchema
     .findById(id)
@@ -26,8 +25,7 @@ router.get("/providers/:id", (req, res) => {
 });
 
 // delete 
-router.delete("/providers/:id", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
+router.delete("/providers/:id", cors(),(req, res) => {
   const { id } = req.params;
   providerSchema
     .deleteOne({ _id: id })
@@ -36,8 +34,7 @@ router.delete("/providers/:id", (req, res) => {
 });
 
 // update
-router.put("/providers/:id", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
+router.put("/providers/:id", cors(),(req, res) => {
   const { id } = req.params;
   const { name, product, email , phone} = req.body;
   providerSchema

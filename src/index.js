@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require('cors')
 const mongoose = require("mongoose");
 require("dotenv").config();
 const providerRoute = require("./routes/providers");
@@ -8,16 +9,15 @@ const app = express();
 const port = process.env.PORT || 9000;
 
 app.use(express.json());
+app.use(cors())
 app.use("/api", providerRoute);
 
 // routes
 app.get("/", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
   res.send("Welcome to my API");
 });
 
 app.get("/version", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
   res.send("Welcome Candidate v1.0");
 });
 // mongodb connection
