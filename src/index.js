@@ -13,10 +13,12 @@ app.use("/api", providerRoute);
 
 // routes
 app.get("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.send("Welcome to my API");
 });
 
 app.get("/version", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.send("Welcome Candidate v1.0");
 });
 // mongodb connection
