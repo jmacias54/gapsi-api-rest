@@ -13,16 +13,19 @@ Content-Type: application/json
 GET https://gapsi-api-rest-production.up.railway.app/api/providers HTTP/1.1
 
 ###
-GET https://gapsi-api-rest-production.up.railway.app/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
+GET https://gapsi-api-rest-production.up.railway.app/api/providers/646d16f8a60d8aea476aa005 HTTP/1.1
 
 ###
-DELETE https://gapsi-api-rest-production.up.railway.app/api/provider/646d17da92a8e4c6a96f5adf HTTP/1.1
+DELETE https://gapsi-api-rest-production.up.railway.app/api/providers/646d17da92a8e4c6a96f5adf HTTP/1.1
 
 ###
-PUT https://gapsi-api-rest-production.up.railway.app/api/provider/646d16f8a60d8aea476aa005 HTTP/1.1
+PUT https://gapsi-api-rest-production.up.railway.app/api/providers/646d16f8a60d8aea476aa005 HTTP/1.1
 Content-Type: application/json
 
 {
   "name": "Arnold Johannsen",
   "email": "johanssen.ar@email.com"
 }
+
+###
+GET https://gapsi-api-rest-production.up.railway.app/version HTTP/1.1

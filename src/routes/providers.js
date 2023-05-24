@@ -4,7 +4,7 @@ const providerService = require("../service/providers");
 const router = express.Router();
 
 // create 
-router.post("/provider",providerService.createProvider);
+router.post("/providers",providerService.createProvider);
 
 // get all 
 router.get("/providers", (req, res) => {
@@ -15,7 +15,7 @@ router.get("/providers", (req, res) => {
 });
 
 // get detail
-router.get("/provider/:id", (req, res) => {
+router.get("/providers/:id", (req, res) => {
   const { id } = req.params;
   providerSchema
     .findById(id)
@@ -24,7 +24,7 @@ router.get("/provider/:id", (req, res) => {
 });
 
 // delete 
-router.delete("/provider/:id", (req, res) => {
+router.delete("/providers/:id", (req, res) => {
   const { id } = req.params;
   providerSchema
     .deleteOne({ _id: id })
@@ -33,7 +33,7 @@ router.delete("/provider/:id", (req, res) => {
 });
 
 // update
-router.put("/provider/:id", (req, res) => {
+router.put("/providers/:id", (req, res) => {
   const { id } = req.params;
   const { name, product, email , phone} = req.body;
   providerSchema
